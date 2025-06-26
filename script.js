@@ -1,6 +1,6 @@
 const questions = [
   {
-    question: "1. Capital of France?",
+    question: "1. What is the Capital of France?",
     options: ["Berlin", "Madrid", "Paris", "Rome"],
     answer: 2,
   },
@@ -10,17 +10,17 @@ const questions = [
     answer: 1,
   },
   {
-    question: "3. Largest planet?",
+    question: "3. which is the Largest planet?",
     options: ["Earth", "Mars", "Jupiter", "Venus"],
     answer: 2,
   },
   {
-    question: "4. Symbol for water?",
+    question: "4. What is the Symbol for water?",
     options: ["CO2", "H2O", "O2", "CH4"],
     answer: 1,
   },
   {
-    question: "5. Continents on Earth?",
+    question: "5. How many continents are there?",
     options: ["5", "6", "7", "8"],
     answer: 2,
   },
@@ -43,10 +43,10 @@ questions.forEach((q, index) => {
     <p>${q.question}</p>`;
 
   q.options.forEach((opt, i) => {
-    const checked = savedProgress[`q${index}`] == i ? "checked" : "";
+    const checked = savedProgress[`q${index}`] == i ? "true" : "";
     html += `
       <label>
-        <input type="radio" name="q${index}" value="${i}" ${checked}>
+        <input type="radio" name="q${index}" value="${i}" checked="${checked}">
         ${opt}
       </label>`;
   });
